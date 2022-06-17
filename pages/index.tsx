@@ -1,8 +1,6 @@
 import type { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
 import Lottie from 'react-lottie'
 import loader from '../loader.json'
-import react from '../react.json'
 
 const Home: NextPage = () => {
 	const defaultOptions = {
@@ -14,14 +12,14 @@ const Home: NextPage = () => {
 		},
 	}
 	return (
-		<div className={styles.container}>
+		<div className='flex flex-col justify-center items-center h-screen bg-black'>
 			<Lottie
 				options={defaultOptions}
-				height={400}
-				width={400}
+				height={300}
+				width={300}
 				isClickToPauseDisabled={true}
 			/>
-			<h1 className={styles.text}>Coming soon</h1>
+			<h1 className='text-white text-3xl'>Coming soon</h1>
 		</div>
 	)
 }
