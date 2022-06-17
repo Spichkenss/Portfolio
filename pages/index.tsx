@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 
 	return (
 		<div
-			className='flex flex-col justify-center items-center min-h-screen dark:bg-black'
+			className='flex flex-col justify-center items-center min-h-screen dark:bg-black select-none'
 			onClick={() => toggleThemeHandler(theme)}
 		>
 			<Lottie
