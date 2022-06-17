@@ -1,9 +1,8 @@
 import type { NextPage } from 'next'
-import Link from 'next/link'
 import Lottie from 'react-lottie'
 import { useTheme } from '../hooks/useTheme'
-
 import loader from '../loader.json'
+import { motion } from 'framer-motion'
 
 const Home: NextPage = () => {
 	const defaultOptions = {
@@ -19,12 +18,13 @@ const Home: NextPage = () => {
 
 	return (
 		<div className='flex flex-col justify-center items-center min-h-screen dark:bg-black'>
-			<button
+			<motion.button
+				whileTap={{ scale: 0.95 }}
 				onClick={() => toggleThemeHandler(theme)}
 				className='bg-black text-white dark:bg-white dark:text-black p-2 rounded-xl '
 			>
-				{theme === 'dark' ? 'Dark' : 'Light'}
-			</button>
+				Theme
+			</motion.button>
 			<div className='pointer-events-none'>
 				<Lottie
 					options={defaultOptions}
