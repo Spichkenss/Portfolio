@@ -18,16 +18,18 @@ const Home: NextPage = () => {
 
 	return (
 		<div
-			className='flex flex-col justify-center items-center min-h-screen dark:bg-black select-none'
+			className='flex flex-col justify-center items-center min-h-screen dark:bg-black'
 			onClick={() => toggleThemeHandler(theme)}
 		>
-			<Lottie
-				options={defaultOptions}
-				height={300}
-				width={300}
-				isClickToPauseDisabled={true}
-			/>
-			<h1 className='text-3xl text-black dark:text-white select-none'>
+			<div className='pointer-events-none'>
+				<Lottie
+					options={defaultOptions}
+					height={300}
+					width={300}
+					isClickToPauseDisabled={true}
+				/>
+			</div>
+			<h1 className='text-3xl text-black dark:text-white select-none '>
 				Coming soon
 			</h1>
 		</div>
