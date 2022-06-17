@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Lottie from 'react-lottie'
 import { useTheme } from '../hooks/useTheme'
 import loader from '../loader.json'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const Home: NextPage = () => {
 	const defaultOptions = {
@@ -17,11 +17,11 @@ const Home: NextPage = () => {
 	const { theme, toggleThemeHandler } = useTheme()
 
 	return (
-		<div className='flex flex-col justify-center items-center min-h-screen dark:bg-black'>
+		<div className='flex flex-col justify-center items-center min-h-screen dark:bg-black duration-300'>
 			<motion.button
 				whileTap={{ scale: 0.95 }}
 				onClick={() => toggleThemeHandler(theme)}
-				className='bg-black text-white dark:bg-white dark:text-black p-2 rounded-xl '
+				className='bg-black text-white dark:bg-white dark:text-black p-2 rounded-xl duration-500'
 			>
 				Theme
 			</motion.button>
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
 					isClickToPauseDisabled={true}
 				/>
 			</div>
-			<h1 className='text-3xl text-black dark:text-white select-none'>
+			<h1 className='text-3xl text-black dark:text-white select-none duration-500'>
 				Coming soon
 			</h1>
 		</div>
