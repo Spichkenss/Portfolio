@@ -5,18 +5,19 @@ import { motion } from 'framer-motion'
 
 const ThemeSwitcher = () => {
 	const { theme, toggleThemeHandler } = useTheme()
+
 	return (
-		<div onClick={() => toggleThemeHandler(theme)}>
+		<button onClick={() => toggleThemeHandler(theme)}>
 			<motion.div
 				whileTap={{
-					rotate: '360deg',
+					rotate: '270deg',
 					opacity: 0,
 					scale: 0,
 				}}
 			>
 				{theme === 'dark' ? <Moon /> : <Sun />}
 			</motion.div>
-		</div>
+		</button>
 	)
 }
 

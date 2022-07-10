@@ -2,7 +2,7 @@ const Sun = () => {
 	return (
 		<svg
 			stroke='black'
-			fill='black'
+			fill='none'
 			strokeWidth={2}
 			viewBox='0 0 24 24'
 			strokeLinecap='round'

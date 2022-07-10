@@ -9,9 +9,9 @@ const Navbar = () => {
 				<Link href='/'>Home</Link>
 				<Link href='/about'>About</Link>
 				<Link href='/works'>Works</Link>
-			</div>
-			<div>
-				<ThemeSwitcher />
+				<div className={styles.toggler}>
+					<ThemeSwitcher />
+				</div>
 			</div>
 		</nav>
 	)
