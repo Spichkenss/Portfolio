@@ -11,6 +11,9 @@ module.exports = {
 				'text-white': '#FFFFFF',
 				'text-black': '#000000',
 			},
+			transitionDuration: {
+				300: '300ms',
+			},
 		},
 	},
 

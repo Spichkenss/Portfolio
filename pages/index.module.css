@@ -1,0 +1,11 @@
+.button {
+	@apply bg-black text-white dark:bg-white dark:text-black p-2 rounded-xl duration-500;
+}
+
+.animatedPicture {
+	@apply pointer-events-none;
+}
+
+.title {
+	@apply text-3xl text-black dark:text-white select-none duration-500;
+}

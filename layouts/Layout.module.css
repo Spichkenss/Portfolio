@@ -1,0 +1,3 @@
+.main {
+	@apply flex flex-col justify-center items-center min-h-screen dark:bg-black duration-[300ms];
+}
