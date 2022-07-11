@@ -7,8 +7,8 @@ function Sun() {
 			viewBox='0 0 24 24'
 			strokeLinecap='round'
 			strokeLinejoin='round'
-			height='1em'
-			width='1em'
+			height='1.5em'
+			width='1.5em'
 		>
 			<circle cx={12} cy={12} r={5} />
 			<line x1={12} y1={1} x2={12} y2={3} />
