@@ -1,6 +1,5 @@
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
 
 interface Props {
 	children: string
@@ -8,9 +7,18 @@ interface Props {
 }
 
 const Link = ({ children, href }: Props) => {
+	const { pathname } = useRouter()
 	return (
 		<NextLink href={`${href}`}>
-			<a>{children}</a>
+			<a
+				style={{
+					fontWeight: pathname === href ? 800 : 400,
+					cursor: 'pointer',
+					fontSize: 18,
+				}}
+			>
+				{children}
+			</a>
 		</NextLink>
 	)
 }
