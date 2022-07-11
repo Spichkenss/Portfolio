@@ -8,8 +8,6 @@ interface Props {
 }
 
 const Link = ({ children, href }: Props) => {
-	const { pathname } = useRouter()
-
 	return (
 		<NextLink href={`${href}`}>
 			<a>{children}</a>

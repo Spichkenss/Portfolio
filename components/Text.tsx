@@ -2,7 +2,7 @@ import { FC, HTMLAttributes, PropsWithChildren } from 'react'
 
 interface Props {
 	children: string
-	className: string
+	className?: string | undefined
 }
 
 const Text: FC<PropsWithChildren<Props>> = ({ children, className }) => {

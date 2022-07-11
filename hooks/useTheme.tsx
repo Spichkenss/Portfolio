@@ -1,11 +1,13 @@
-import { useLayoutEffect, useState } from 'react'
+import { EffectCallback, useEffect, useLayoutEffect, useState } from 'react'
 
 export const useTheme = () => {
-	const [theme, setTheme] = useState<string>((): string => {
+	const [theme, setTheme] = useState<string>('')
+
+	useEffect(() => {
 		if (typeof window !== 'undefined')
-			return localStorage.getItem('theme') as string
-		return 'light'
-	})
+			setTheme(localStorage.getItem('theme') as string)
+		setTheme('light')
+	}, [])
 
 	const toggleThemeHandler = (currentTheme: string) => {
 		currentTheme === 'dark' ? setTheme('light') : setTheme('dark')
